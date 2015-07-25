@@ -1,41 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>ife_game1</title>
-	<style>
-		*{
-			margin:0px;
-			padding: 0px;
-			background-color: blue;
-		}
-
-		h3{
-			line-height: 30px;
-			text-align: center;
-		}
-
-		h3 .streak{
-			color: white;
-		}
-
-		h1{
-			text-align: center;
-		}
-
-		.wrap_content{
-			width: 100%;
-		}
-
-		.user_choice, .display_result{
-			 text-align: center;
-		}
-	   
-	   #user, #pc{
-			display: none;
-	   }
-
-	</style>
+	<meta charset="UTF-8" content="text/html">
+	<script src="js/app1.js" type="txt/javascript"></script>
+	<link rel="stylesheet" href="css/style.css" type="txt/css" >
+	<title>ife_game1</title> 
 </head>
 <body>
 	<div class="wrap_game">
@@ -43,15 +12,15 @@
 		<h3>你已经连续获胜了<span id="streak"></span>次</h3>
 		<div class="wrap_content">
 			<div class="user_choice">
-				<img id="shitou" alt="shitou" src="shitou.jpg"></li>
-				<img id="jiandao" alt="jiandao" src="jiandao.jpg"></li>
-				<img id="bu" alt="bu" src="bu.jpg" ></li>
+				<img id="shitou" alt="shitou" src="shitou.png"></li>
+				<img id="jiandao" alt="jiandao" src="jiandao.png"></li>
+				<img id="bu" alt="bu" src="bu.png" ></li>
 			</div>
 			<div class="display_result">
-				<img id="user" src="bu.jpg" alt="">
-				<img id="pc" src="bu.jpg" alt="">
+				<img id="user" src="bu.png" alt="">
+				<img id="pc" src="bu.png" alt="">
 			</div>
-			<h1 id="result">You Win!</h1>
+			<h1 id="result"></h1>
 		</div>
 	</div>
 	<script>
@@ -115,7 +84,7 @@
 			pc.style.display = "inline";
 			user.src = this.src;
 			user.alt = this.alt;
-			pc.src = choice_array[pc_result-1] + ".jpg";
+			pc.src = choice_array[pc_result-1] + ".png";
 			pc.alt = choice_array[pc_result-1];
 
 			var game_result = gameResult(this.result, pc_result);
