@@ -23,14 +23,27 @@
 
 		.user_choice, .display_result{
 			 text-align: center;
+			 /*display: inline;*/
+		}
+
+		.display_result div{
+			display: inline-block;
 		}
 	   
 	   #user, #pc{
-			display: none;
+	   		width: 130px;
+	   		height: 130px;
+	   		margin: 20px 20px;
+			visibility: hidden;
+	   }
+
+	   .user_choice img{
+	   		width: 130px;
+	   		height: 130px;
 	   }
 
 	   .user_choice img+img{
-	   		margin: 7px 15px;
+	   		margin: 10px 15px;
 	   }
 
 	   .user_choice img:hover{

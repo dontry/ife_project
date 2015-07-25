@@ -1,17 +1,19 @@
+var choice_array = ["shitou", "jiandao", "bu"];
+var gameResult = getResult();
+var streak_value = 0;
+
 
 window.onload = function(){
-		var choice_array = ["shitou", "jiandao", "bu"];
+		console.log("heyhey!")	
 		var user = document.getElementById("user");
 		var pc = document.getElementById("pc");
 		var result = document.getElementById("result");
 		var streak = document.getElementById("streak");
-		var streak_value = 0;
-		var gameResult = getResult();
 		addHandlers(choice_array);
 }		
 
 
-function addHandlers(array)s{
+function addHandlers(array){
 	var getChoice = function(i){
 		var c = new choice(document.getElementById(array[i]));
 		c.addEvent('click', playGame.bind(c), false);
@@ -54,8 +56,8 @@ function playGame(){
 	}else{
 		pc_result = 3;
 	}
-	user.style.display = "inline";
-	pc.style.display = "inline";
+	user.style.visibility = "visible";
+	pc.style.visibility = "visible";
 	user.src = this.src;
 	user.alt = this.alt;
 	pc.src = choice_array[pc_result-1] + ".png";
