@@ -1,5 +1,4 @@
 var choice_array = ["shitou", "jiandao", "bu"];
-var gameResult = getResult();
 var streak_value = 0;
 
 
@@ -63,8 +62,7 @@ function playGame(){
 	pc.src = choice_array[pc_result-1] + ".png";
 	pc.alt = choice_array[pc_result-1];
 
-	var game_result = gameResult(this.result, pc_result);
-
+	var game_result = getResult(this.result, pc_result);
 	result.innerHTML = "You " + game_result + ".";		
 	streak.innerHTML = streak_value;	
 };
@@ -78,15 +76,13 @@ function userResult(name){
 		}
 	};
 
-function getResult(){
+function getResult(user_result, pc_result){
 	// var streak = 0;
-
-	return function(_user_result, _pc_result){
-		if(_user_result == _pc_result){
+		if( user_result == pc_result){
 			streak_value = 0;
 			return "tie";
 		}
-		if((_user_result == 3 && _pc_result == 1) || (_user_result == 2 && _pc_result == 3) || ( _user_result == 1 && _pc_result == 2)){
+		if(( user_result == 3 && pc_result == 1) || ( user_result == 2 && pc_result == 3) || ( user_result == 1 && pc_result == 2)){
 			++streak_value;
 			return "win";
 		}else{
