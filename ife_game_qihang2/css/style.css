@@ -1,0 +1,66 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+	border-spacing: 0px;
+}
+
+.game-ui{
+	width: 350px;
+	/*height: 1000px;*/
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #EFC5C5;
+	padding: 10px 15px;
+}
+
+.panel{
+	margin: 0 auto;
+	width: 85%;
+	height: 60px;
+/*	display: table;
+	table-layout: fixed;*/
+}
+
+.btn-undo{
+	float: left;
+	width: 100px;
+	line-height: 50px;
+	font: bolder 30px/50px arial, sans-serif;
+	color: white;
+	background-color: blue;
+	text-align: center;
+	margin-right: 20px;
+	vertical-align: center;
+}
+
+.score{
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: right;
+}
+
+.score h3{
+	font: bolder 25px arial, sans-serif;
+}
+
+.score p{
+	font: 25px arial;
+}
+
+.board{
+	margin: 2px auto;
+}
+
+.board tbody{
+	outline: 4px solid #B38C8C;
+}
+
+.board td{
+	box-sizing:border-box;
+	/*display: table-cell;*/
+	width: 80px;
+	height: 80px;
+	border: 4px solid #B38C8C;
+	background-color: #EFE0C5;
+}
